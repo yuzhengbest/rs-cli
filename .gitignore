@@ -1,0 +1,4 @@
+node_modules
+outfile.cjs
+dist*
+.vscode

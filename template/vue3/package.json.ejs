@@ -1,0 +1,52 @@
+{
+  "name": "<%= packageName %>",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --mode development",
+    "build": "vue-tsc && vite build --mode production",
+    "build:only": "vite build --mode production",
+    "preview": "vite preview",
+    "lint": "eslint ./src/**/*.{js,jsx,vue,ts,tsx} --fix",
+    "prepare": "husky install",
+    "postinstall": "git config --local core.commentChar '#' && husky install"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,vue}": "npm run lint",
+    "*.{css,html,less,json,md}": "prettier -w"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.3.1",
+    "axios": "^1.7.2",
+    "element-plus": "^2.7.3",
+    "nprogress": "^0.2.0",
+    "pinia": "^2.1.7",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "@typescript-eslint/eslint-plugin": "^4.28.4",
+    "@typescript-eslint/parser": "^4.28.4",
+    "@types/node": "^20.12.12",
+    "@types/nprogress": "^0.2.3",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.24.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-vue": "^7.16.0",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.1.2",
+    "prettier": "^3.2.5",
+    "typescript": "^5.2.2",
+    "typescript-eslint": "^7.11.0",
+    "vite": "^5.2.0",
+    "vite-plugin-eslint": "^1.3.0",
+    "vite-plugin-svg-icons": "^2.0.1",
+    "vue-tsc": "^2.0.6"
+  }
+}
