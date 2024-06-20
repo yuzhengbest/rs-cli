@@ -70,7 +70,7 @@ async function init() {
   })
 
   let targetDir = argv._[0]
-  const defaultProjectName = !targetDir ? 'zf-project' : targetDir
+  const defaultProjectName = !targetDir ? 'my-project' : targetDir
   const isVue3 = argv.vue3
   const isVue2 = argv.vue2
 
