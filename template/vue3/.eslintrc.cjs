@@ -1,3 +1,4 @@
+// 高版本的 eslint 暂无法和 vscode 中的插件 ESLint 兼容，故本项目模板暂且使用低版本的 eslint 和 4.x 版本的 typescript
 module.exports = {
   globals: {
     defineProps: 'readonly',
@@ -28,4 +29,3 @@ module.exports = {
     }
   ]
 }
-

@@ -3,33 +3,29 @@ import {
   createWebHashHistory,
   // createWebHistory,
   RouteRecordRaw,
-  RouteLocationNormalized,
-} from 'vue-router';
-import nprogress from 'nprogress'; // @types/nprogress
-import 'nprogress/nprogress.css';
+  RouteLocationNormalized
+} from 'vue-router'
 
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    redirect: '/admin/home',
-  },
-];
+    redirect: '/admin/home'
+  }
+]
 
 const router = createRouter({
   history: createWebHashHistory(), // 路由模式
-  routes,
-});
+  routes
+})
 
 router.beforeEach(
   (to: RouteLocationNormalized, from: RouteLocationNormalized) => {
-    console.log('to: ', to);
-    console.log('from: ', from);
-    nprogress.start(); // 开始加载进度条
-  },
-);
+    console.log('to: ', to)
+    console.log('from: ', from)
+  }
+)
 
 router.afterEach(() => {
-  nprogress.done(); // 结束加载进度条
-});
+})
 
-export default router;
+export default router
