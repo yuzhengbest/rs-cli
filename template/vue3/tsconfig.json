@@ -1,16 +1,17 @@
 {
   "compilerOptions": {
-    "baseUrl": "./", // 解析非相对模块的基地址，默认是当前目录
-    "paths": { // 路径映射，相对于baseUrl
-      "@/*": ["src/*"]
+    "baseUrl": "./",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
     },
-
     "target": "ES2020",
     "useDefineForClassFields": true,
     "module": "ESNext",
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "skipLibCheck": true,
-    "types": ["element-plus/global"],
+    "types": ["vite/client"], // 配置此属性，可在全局获取使用 import.meta.env
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -26,6 +27,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
